@@ -4,16 +4,9 @@
     <meta charset="utf-8">
     <title>QR Code Reader</title>
     <script src="jsQR.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <style>
-        body{
-         
-            justify-content: center;
-            align-items: center;
-             display: flex;
-             background-color: rgb(146, 23, 23);
-             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            
-        }
+      
 
         h1{
             color: aliceblue;
@@ -43,13 +36,16 @@
         }
     </style>
 </head>
-<body>
-    <section>
-        <h1>QR Code Reader</h1>
-        <p>Click the button to scan a QR code:</p>
-        <button onclick="scanQR()">Scan QR Code</button>
-        <div id="result"></div>
-    </section>
+<body class="bg-primary masthead ">
+    <header class="container justify-content-center align-items-center">
+        <section class=" container-fluid my-5 col-auto col-md-auto mx-auto ">
+            <h1 class="container">QR Code Reader</h1>
+            <p class="container">Click the button to scan a QR code:</p>
+            <button class="btn btn-secondary " onclick="scanQR()">Scan QR Code</button>
+            <div id="result"></div>
+        </section>
+       
+    </header>
    
     
     <script>
