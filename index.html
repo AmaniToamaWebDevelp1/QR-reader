@@ -36,9 +36,9 @@
         }
     </style>
 </head>
-<body class="bg-primary  ">
-    <header class="container justify-content-center align-items-center">
-        <section class=" container-fluid my-5 col-auto col-md-auto mx-auto ">
+<body class="bg-primary container  container-fluid d-flex align-items-center justify-content-center text-center font-monospace">
+    <header class="row">
+        <section class=" my-5 col-auto col-md-auto mx-auto ">
             <h1 class="container">QR Code Reader</h1>
             <p class="container">Click the button to scan a QR code:</p>
             <button class="btn btn-secondary " onclick="scanQR()">Scan QR Code</button>
@@ -50,7 +50,7 @@
     
     <script>
         function scanQR() {
-            navigator.mediaDevices.getUserMedia({ video: { user: 'environment' } }).then(function(stream) {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } }).then(function(stream) {
                 var video = document.createElement('video');
                 video.srcObject = stream;
                 video.setAttribute('playsinline', true); // required to tell iOS safari we don't want fullscreen
